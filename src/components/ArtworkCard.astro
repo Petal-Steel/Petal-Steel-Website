@@ -1,0 +1,19 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import ArtworkFacts from './ArtworkFacts.astro';
+
+interface Props { artwork: CollectionEntry<'artworks'>; }
+const { artwork } = Astro.props;
+---
+
+<article class="artwork-card">
+  {artwork.data.heroImage ? (
+    <img src={artwork.data.heroImage.src} alt={artwork.data.heroImage.alt} loading="lazy" />
+  ) : (
+    <div class="media-placeholder" aria-label="Artwork image to be added">Photography to be added</div>
+  )}
+  <div class="artwork-card__content">
+    <h2><a href={`/work/${artwork.data.slug}/`}>{artwork.data.title}</a></h2>
+    <ArtworkFacts artwork={artwork.data} />
+  </div>
+</article>

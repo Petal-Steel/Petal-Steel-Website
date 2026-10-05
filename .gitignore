@@ -1,0 +1,16 @@
+# dependencies and builds
+node_modules/
+dist/
+.astro/
+
+# environment and local editor files
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+.vscode/
+
+# deployment and machine runtime files
+.wrangler/
+.sites-runtime/

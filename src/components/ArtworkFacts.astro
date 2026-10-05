@@ -1,0 +1,20 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props { artwork: CollectionEntry<'artworks'>['data']; }
+const { artwork } = Astro.props;
+const facts = [
+  ['Year', artwork.year],
+  ['Material', artwork.material],
+  ['Dimensions', artwork.dimensions],
+  ['Status', artwork.status === 'Public Display' ? `Public Display${artwork.statusLocation ? ` — ${artwork.statusLocation}` : ''}` : artwork.status],
+];
+---
+
+{facts.some(([, value]) => value) && (
+  <dl class="artwork-facts">
+    {facts.filter(([, value]) => value).map(([label, value]) => (
+      <div><dt>{label}</dt><dd>{value}</dd></div>
+    ))}
+  </dl>
+)}
