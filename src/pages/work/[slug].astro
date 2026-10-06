@@ -1,5 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
+import ArtworkPhoto from '../../components/ArtworkPhoto.astro';
+import ArtworkLightbox from '../../components/ArtworkLightbox.astro';
 import ArtworkFacts from '../../components/ArtworkFacts.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
@@ -11,9 +13,37 @@ export async function getStaticPaths() {
 const { artwork } = Astro.props;
 ---
 
-<BaseLayout title={`${artwork.data.title} | Petal Steel Art`}>
+<BaseLayout title={`${artwork.data.title} | Petal Steel Art`} description={`${artwork.data.title}, stainless steel sculpture by ${artwork.data.artist}.`}>
   <article class="artwork-page">
-    {artwork.data.heroImage ? <img class="artwork-hero" src={artwork.data.heroImage.src} alt={artwork.data.heroImage.alt} /> : <div class="media-placeholder artwork-hero">Photography to be added</div>}
-    <div class="artwork-page__details"><p class="eyebrow">{artwork.data.classification === 'featured' ? 'Featured Work' : 'Other Work'}</p><h1>{artwork.data.title}</h1><ArtworkFacts artwork={artwork.data} />{artwork.data.summary && <p>{artwork.data.summary}</p>}</div>
+    <header class="artwork-heading">
+      <a class="back-link" href="/work/">Work</a>
+      <p class="eyebrow">Featured Work</p>
+      <h1>{artwork.data.title}</h1>
+      {artwork.data.artist && <p class="artwork-artist">By {artwork.data.artist}</p>}
+    </header>
+
+    <div class="artwork-lead">
+      {artwork.data.heroImage && <ArtworkPhoto image={artwork.data.heroImage} variant="lead" index={1} />}
+      <div class="artwork-record">
+        <section aria-labelledby="artwork-record-heading">
+          <h2 id="artwork-record-heading">Work record</h2>
+          <ArtworkFacts artwork={artwork.data} />
+        </section>
+        {artwork.data.description && (
+          <section class="artwork-description" aria-labelledby="description-heading">
+            <h2 id="description-heading">About the work</h2>
+            {artwork.data.description.split(/\n\s*\n/).map((paragraph) => <p>{paragraph}</p>)}
+          </section>
+        )}
+      </div>
+    </div>
+
+    {artwork.data.images.length > 0 && (
+      <section class="artwork-studies" aria-labelledby="photographic-study-heading">
+        <h2 id="photographic-study-heading" class="visually-hidden">Photographic study</h2>
+        {artwork.data.images.map((image, index) => <ArtworkPhoto image={image} index={index + 2} />)}
+      </section>
+    )}
   </article>
+  <ArtworkLightbox />
 </BaseLayout>

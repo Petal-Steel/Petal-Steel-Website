@@ -1,0 +1,33 @@
+<dialog class="artwork-lightbox" data-photo-dialog aria-label="Enlarged artwork photograph">
+  <button class="lightbox-close" type="button" data-photo-close aria-label="Close enlarged photograph">Close</button>
+  <img data-photo-image alt="" />
+  <p data-photo-caption></p>
+</dialog>
+
+<script>
+  const dialog = document.querySelector<HTMLDialogElement>('[data-photo-dialog]');
+  const enlargedImage = dialog?.querySelector<HTMLImageElement>('[data-photo-image]');
+  const caption = dialog?.querySelector<HTMLElement>('[data-photo-caption]');
+  const closeButton = dialog?.querySelector<HTMLButtonElement>('[data-photo-close]');
+
+  document.addEventListener('click', (event) => {
+    const target = event.target;
+    if (!(target instanceof Element)) return;
+
+    const trigger = target.closest<HTMLButtonElement>('[data-photo-open]');
+    if (trigger && dialog && enlargedImage) {
+      enlargedImage.src = trigger.dataset.full ?? '';
+      enlargedImage.alt = trigger.dataset.alt ?? '';
+      if (caption) caption.textContent = trigger.dataset.caption ?? '';
+      dialog.showModal();
+      closeButton?.focus();
+      return;
+    }
+
+    if (target.closest('[data-photo-close]')) dialog?.close();
+  });
+
+  dialog?.addEventListener('click', (event) => {
+    if (event.target === dialog) dialog.close();
+  });
+</script>

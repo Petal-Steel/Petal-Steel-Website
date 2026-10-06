@@ -1,0 +1,65 @@
+{
+  "title": "A New Dance",
+  "slug": "a-new-dance",
+  "artist": "William Payne",
+  "year": "2026",
+  "material": "Stainless Steel",
+  "dimensions": "75 × 55 × 40 in.",
+  "status": "Public Display",
+  "statusLocation": "Moore Farms Botanical Garden, Lake City, SC",
+  "classification": "featured",
+  "heroImage": {
+    "src": "/media/artwork/a-new-dance/a-new-dance-establishing-view-1200.webp",
+    "fullSrc": "/media/artwork/a-new-dance/a-new-dance-establishing-view-2400.webp",
+    "width": 1200,
+    "height": 1800,
+    "fullWidth": 2400,
+    "alt": "Full view of the stainless steel sandhill crane sculpture standing on its reed-like base with one wing extended."
+  },
+  "images": [
+    {
+      "src": "/media/artwork/a-new-dance/a-new-dance-head-and-neck-1200.webp",
+      "fullSrc": "/media/artwork/a-new-dance/a-new-dance-head-and-neck-2400.webp",
+      "width": 1200,
+      "height": 1800,
+      "fullWidth": 2400,
+      "alt": "Close view of the crane's head and neck with its feathered wing in the foreground.",
+      "homepageFeature": true
+    },
+    {
+      "src": "/media/artwork/a-new-dance/a-new-dance-feathered-wing-1200.webp",
+      "fullSrc": "/media/artwork/a-new-dance/a-new-dance-feathered-wing-2400.webp",
+      "width": 1200,
+      "height": 1800,
+      "fullWidth": 2400,
+      "alt": "Front view of the crane's layered metal feathers across its body and outstretched wing."
+    },
+    {
+      "src": "/media/artwork/a-new-dance/a-new-dance-crane-profile-1200.webp",
+      "fullSrc": "/media/artwork/a-new-dance/a-new-dance-crane-profile-2400.webp",
+      "width": 1200,
+      "height": 1800,
+      "fullWidth": 2400,
+      "alt": "Side view of the crane's sculpted head and neck against the garden surroundings."
+    },
+    {
+      "src": "/media/artwork/a-new-dance/a-new-dance-rear-feather-detail-1200.webp",
+      "fullSrc": "/media/artwork/a-new-dance/a-new-dance-rear-feather-detail-2400.webp",
+      "width": 1200,
+      "height": 1800,
+      "fullWidth": 2400,
+      "alt": "Rear view showing the crane's layered wing feathers and long legs."
+    },
+    {
+      "src": "/media/artwork/a-new-dance/a-new-dance-legs-and-base-1200.webp",
+      "fullSrc": "/media/artwork/a-new-dance/a-new-dance-legs-and-base-2400.webp",
+      "width": 1200,
+      "height": 1800,
+      "fullWidth": 2400,
+      "alt": "Close view of the crane's long legs, reed details, and steel base.",
+      "homepageFeature": true
+    }
+  ],
+  "description": "In A New Dance, a sandhill crane steps into an unexpected rhythm, not the ritualized courtship of its kind, but a deliberate, human-like performance. Its poised body and lifted wings echo the grace of a ballet dancer, balanced between wild instinct and conscious choice.\n\nThis work speaks to self-reinvention, to breaking away from the choreography written by expectation, heritage, or habit. The crane stands as a mirror to the human spirit, choosing its own rhythm, outgrowing the old self, and finding freedom in authenticity.\n\nIt is a celebration of authenticity, of living the life you choose, not the one scripted for you.",
+  "processReferences": []
+}

@@ -14,8 +14,8 @@ const otherWork = artworks.filter(({ data }) => data.classification === 'other-w
     <h2 id="featured-work">Featured Work</h2>
     {featured.length ? <div class="artwork-grid">{featured.map((artwork) => <ArtworkCard artwork={artwork} />)}</div> : <p class="quiet-note">Featured artwork will be added with approved photography and factual details.</p>}
   </section>
-  <section class="artwork-group" aria-labelledby="other-work">
+  {otherWork.length > 0 && <section class="artwork-group" aria-labelledby="other-work">
     <h2 id="other-work">Other Work</h2>
-    {otherWork.length ? <div class="artwork-grid">{otherWork.map((artwork) => <ArtworkCard artwork={artwork} />)}</div> : <p class="quiet-note">Additional artwork will be added here.</p>}
-  </section>
+    <div class="artwork-grid">{otherWork.map((artwork) => <ArtworkCard artwork={artwork} />)}</div>
+  </section>}
 </BaseLayout>

@@ -8,7 +8,18 @@ const { artwork } = Astro.props;
 
 <article class="artwork-card">
   {artwork.data.heroImage ? (
-    <img src={artwork.data.heroImage.src} alt={artwork.data.heroImage.alt} loading="lazy" />
+    <a href={`/work/${artwork.data.slug}/`} aria-label={`View ${artwork.data.title}`}>
+      <img
+        src={artwork.data.heroImage.src}
+        srcset={`${artwork.data.heroImage.src} ${artwork.data.heroImage.width}w, ${artwork.data.heroImage.fullSrc} ${artwork.data.heroImage.fullWidth}w`}
+        sizes="(min-width: 48rem) 46rem, 100vw"
+        width={artwork.data.heroImage.width}
+        height={artwork.data.heroImage.height}
+        alt={artwork.data.heroImage.alt}
+        loading="lazy"
+        decoding="async"
+      />
+    </a>
   ) : (
     <div class="media-placeholder" aria-label="Artwork image to be added">Photography to be added</div>
   )}

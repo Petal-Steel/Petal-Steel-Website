@@ -7,7 +7,7 @@ const facts = [
   ['Year', artwork.year],
   ['Material', artwork.material],
   ['Dimensions', artwork.dimensions],
-  ['Status', artwork.status === 'Public Display' ? `Public Display${artwork.statusLocation ? ` — ${artwork.statusLocation}` : ''}` : artwork.status],
+  ['Status', artwork.status === 'Public Display' ? `Public Display${artwork.statusLocation ? ` · ${artwork.statusLocation}` : ''}` : artwork.status],
 ];
 ---
 

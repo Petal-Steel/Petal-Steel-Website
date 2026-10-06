@@ -2,8 +2,13 @@ import { defineCollection, z } from 'astro:content';
 
 const imageReference = z.object({
   src: z.string(),
+  fullSrc: z.string(),
+  width: z.number().int().positive(),
+  height: z.number().int().positive(),
+  fullWidth: z.number().int().positive(),
   alt: z.string(),
   caption: z.string().optional(),
+  homepageFeature: z.boolean().default(false),
 });
 
 const artworks = defineCollection({
@@ -11,6 +16,7 @@ const artworks = defineCollection({
   schema: z.object({
     title: z.string(),
     slug: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),
+    artist: z.string().optional(),
     year: z.string().optional(),
     material: z.string().optional(),
     dimensions: z.string().optional(),
