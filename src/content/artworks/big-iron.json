@@ -1,0 +1,56 @@
+{
+  "title": "big iron",
+  "slug": "big-iron",
+  "artist": "William Payne",
+  "year": "2026",
+  "material": "Steel, Stainless Steel, White Oak",
+  "dimensions": "84 × 48 × 36 in.",
+  "status": "Available",
+  "classification": "featured",
+  "heroImage": {
+    "src": "/media/artwork/big-iron/big-iron-establishing-view-1200.webp",
+    "fullSrc": "/media/artwork/big-iron/big-iron-establishing-view-2400.webp",
+    "width": 1200,
+    "height": 1200,
+    "fullWidth": 2400,
+    "alt": "Low-angle view of the full big iron sculpture against the sky and open field."
+  },
+  "images": [
+    {
+      "src": "/media/artwork/big-iron/big-iron-revolver-and-vines-detail-1200.webp",
+      "fullSrc": "/media/artwork/big-iron/big-iron-revolver-and-vines-detail-2400.webp",
+      "width": 1200,
+      "height": 1600,
+      "fullWidth": 2400,
+      "alt": "Close view of the wooden grip and revolver body with stainless steel vines and flowers beside it."
+    },
+    {
+      "src": "/media/artwork/big-iron/big-iron-contextual-display-view-1200.webp",
+      "fullSrc": "/media/artwork/big-iron/big-iron-contextual-display-view-2400.webp",
+      "width": 1200,
+      "height": 1200,
+      "fullWidth": 2400,
+      "alt": "Full sculpture displayed outdoors in front of a storefront.",
+      "homepageFeature": true
+    },
+    {
+      "src": "/media/artwork/big-iron/big-iron-revolver-grip-detail-1200.webp",
+      "fullSrc": "/media/artwork/big-iron/big-iron-revolver-grip-detail-2400.webp",
+      "width": 1200,
+      "height": 1200,
+      "fullWidth": 2400,
+      "alt": "Close view of the revolver's cylinder, trigger guard, and white oak grip.",
+      "homepageFeature": true
+    },
+    {
+      "src": "/media/artwork/big-iron/big-iron-floral-steel-detail-1200.webp",
+      "fullSrc": "/media/artwork/big-iron/big-iron-floral-steel-detail-2400.webp",
+      "width": 1200,
+      "height": 1200,
+      "fullWidth": 2400,
+      "alt": "Soft-focus close view of metal flowers and curved stainless steel stems."
+    }
+  ],
+  "description": "big iron pays homage to the revolver that became an icon of the American West. Built at monumental scale, the sculpture takes the form of a Colt .45, constructed from steel, stainless steel, and white oak.\n\nThe piece draws inspiration from the song Big Iron, the story of a duel between an Arizona Ranger and outlaw Texas Red in the town of Agua Fria.\n\nStainless steel forms suggest smoke and vines, giving way to angel's trumpets, flowers known for their deadly beauty, a quality shared by the revolver they surround.",
+  "processReferences": []
+}

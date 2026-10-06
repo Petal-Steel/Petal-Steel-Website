@@ -1,0 +1,48 @@
+{
+  "title": "Loot",
+  "slug": "loot",
+  "artist": "William Payne",
+  "year": "2026",
+  "material": "Painted Steel",
+  "dimensions": "60 × 50 × 60 in.",
+  "status": "Available",
+  "classification": "featured",
+  "heroImage": {
+    "src": "/media/artwork/loot/loot-establishing-view-1200.webp",
+    "fullSrc": "/media/artwork/loot/loot-establishing-view-2305.webp",
+    "width": 1200,
+    "height": 1291,
+    "fullWidth": 2305,
+    "alt": "Blue faceted diamond-shaped sculpture on a black pedestal, viewed at an angle outdoors."
+  },
+  "images": [
+    {
+      "src": "/media/artwork/loot/loot-alternate-angle-view-1200.webp",
+      "fullSrc": "/media/artwork/loot/loot-alternate-angle-view-2400.webp",
+      "width": 1200,
+      "height": 1224,
+      "fullWidth": 2400,
+      "alt": "Blue faceted sculpture and curved black pedestal shown from another angle outdoors.",
+      "homepageFeature": true
+    },
+    {
+      "src": "/media/artwork/loot/loot-front-view-622.webp",
+      "fullSrc": "/media/artwork/loot/loot-front-view-622.webp",
+      "width": 622,
+      "height": 726,
+      "fullWidth": 622,
+      "alt": "Front view of the blue diamond-shaped sculpture on a black pedestal, with trees in the background.",
+      "homepageFeature": true
+    },
+    {
+      "src": "/media/artwork/loot/loot-detail-view-561.webp",
+      "fullSrc": "/media/artwork/loot/loot-detail-view-561.webp",
+      "width": 561,
+      "height": 602,
+      "fullWidth": 561,
+      "alt": "Close view of the blue faceted sculpture and its black pedestal base."
+    }
+  ],
+  "description": "Loot is a video game artifact brought to life in steel and paint. Its bold lines, saturated color, and exaggerated contours bring the familiar promise of treasure into the real world, turning a digital reward into a physical object worth pursuing.",
+  "processReferences": []
+}

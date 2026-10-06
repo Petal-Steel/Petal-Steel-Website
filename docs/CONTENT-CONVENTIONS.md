@@ -8,6 +8,8 @@ Create an artwork data file at `src/content/artworks/<slug>.json` (or `.yaml`) u
 
 `status` supports `Available`, `Not Available`, `Sold`, and `Public Display`. A public-display entry must include `statusLocation`.
 
+Featured artwork homepage information includes the artist attribution from each artwork record so collaborators receive visible credit.
+
 `heroImage` and `images` use `{ "src", "fullSrc", "width", "height", "fullWidth", "alt", "caption", "homepageFeature" }`. `src` is the responsive page image; `fullSrc` is the larger lightbox image. Record intrinsic dimensions to prevent layout shift. Keep alt text descriptive of what is visible; captions are optional. Set `homepageFeature` for two or three selected detail views on a featured work. `summary` is a short factual presentation; `description` is optional longer copy; `processReferences` lists curated process-entry filenames or identifiers.
 
 For major work, lead with the strongest complete view, then order detail views to guide attention across the form. Preserve the photographs' original aspect ratios. Provide both 1200 px and 2400 px WebP derivatives where source dimensions allow, keeping master images outside the repository. The shared lightbox opens the larger copy in a native dialog, closes by button, backdrop, or Escape, and returns focus to the activating image.

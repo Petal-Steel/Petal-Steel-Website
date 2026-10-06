@@ -1,0 +1,56 @@
+{
+  "title": "Big Dreams",
+  "slug": "big-dreams",
+  "artist": "William Payne",
+  "year": "2026",
+  "material": "Steel, Stainless Steel",
+  "dimensions": "100 × 48 × 36 in.",
+  "status": "Available",
+  "classification": "featured",
+  "heroImage": {
+    "src": "/media/artwork/big-dreams/big-dreams-establishing-view-1200.webp",
+    "fullSrc": "/media/artwork/big-dreams/big-dreams-establishing-view-2327.webp",
+    "width": 1200,
+    "height": 1576,
+    "fullWidth": 2327,
+    "alt": "Tall steel sculpture with a circular web and three metal feathers arranged vertically, standing on a square base outdoors."
+  },
+  "images": [
+    {
+      "src": "/media/artwork/big-dreams/big-dreams-web-detail-1200.webp",
+      "fullSrc": "/media/artwork/big-dreams/big-dreams-web-detail-2400.webp",
+      "width": 1200,
+      "height": 1200,
+      "fullWidth": 2400,
+      "alt": "Close view of the circular metal web and its concentric wires, with upper portions of the feathers visible.",
+      "homepageFeature": true
+    },
+    {
+      "src": "/media/artwork/big-dreams/big-dreams-full-sculpture-view-1200.webp",
+      "fullSrc": "/media/artwork/big-dreams/big-dreams-full-sculpture-view-2400.webp",
+      "width": 1200,
+      "height": 1200,
+      "fullWidth": 2400,
+      "alt": "Full view of the circular web, three metal feathers, and square base in a grassy setting.",
+      "homepageFeature": true
+    },
+    {
+      "src": "/media/artwork/big-dreams/big-dreams-alternate-angle-view-1200.webp",
+      "fullSrc": "/media/artwork/big-dreams/big-dreams-alternate-angle-view-2400.webp",
+      "width": 1200,
+      "height": 1194,
+      "fullWidth": 2400,
+      "alt": "Full sculpture from another angle, showing the circular web and long feather forms against a blue sky."
+    },
+    {
+      "src": "/media/artwork/big-dreams/big-dreams-street-display-context-1200.webp",
+      "fullSrc": "/media/artwork/big-dreams/big-dreams-street-display-context-2400.webp",
+      "width": 1200,
+      "height": 1200,
+      "fullWidth": 2400,
+      "alt": "The full sculpture displayed on a sidewalk in front of a storefront, with a fire hydrant nearby."
+    }
+  ],
+  "description": "Big Dreams takes the dreamcatcher, once a small token of protection, and rebuilds it at an imposing scale in steel and stainless steel. Its oversized web is engineered for modern-day protection.\n\nThe work stands against the constant forces competing to shape what we fear, value, believe, and aspire to become. If a dreamcatcher is a filter for our thoughts and dreams, who is weaving yours?",
+  "processReferences": []
+}

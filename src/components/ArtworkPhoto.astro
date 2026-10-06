@@ -22,7 +22,9 @@ const { image, variant = 'study', index = 1 } = Astro.props;
   >
     <img
       src={image.src}
-      srcset={`${image.src} ${image.width}w, ${image.fullSrc} ${image.fullWidth}w`}
+      srcset={image.fullWidth > image.width
+        ? `${image.src} ${image.width}w, ${image.fullSrc} ${image.fullWidth}w`
+        : `${image.src} ${image.width}w`}
       sizes={variant === 'lead' ? '(min-width: 72rem) 57vw, (min-width: 48rem) 62vw, 100vw' : '(min-width: 72rem) 40vw, (min-width: 48rem) 48vw, 100vw'}
       width={image.width}
       height={image.height}

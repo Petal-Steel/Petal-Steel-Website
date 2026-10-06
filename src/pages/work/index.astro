@@ -2,9 +2,10 @@
 import { getCollection } from 'astro:content';
 import ArtworkCard from '../../components/ArtworkCard.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { orderFeaturedArtworks } from '../../utils/featured-artwork-order';
 
 const artworks = await getCollection('artworks');
-const featured = artworks.filter(({ data }) => data.classification === 'featured');
+const featured = orderFeaturedArtworks(artworks.filter(({ data }) => data.classification === 'featured'));
 const otherWork = artworks.filter(({ data }) => data.classification === 'other-work');
 ---
 

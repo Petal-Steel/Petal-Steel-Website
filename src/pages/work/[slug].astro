@@ -14,7 +14,11 @@ const { artwork } = Astro.props;
 ---
 
 <BaseLayout title={`${artwork.data.title} | Petal Steel Art`} description={`${artwork.data.title}, stainless steel sculpture by ${artwork.data.artist}.`}>
-  <article class="artwork-page">
+  <article class:list={[
+    'artwork-page',
+    artwork.data.heroImage?.width === artwork.data.heroImage?.height && 'artwork-page--square',
+    artwork.data.heroImage && artwork.data.heroImage.width !== artwork.data.heroImage.height && artwork.data.heroImage.width / artwork.data.heroImage.height > 0.7 && 'artwork-page--natural-aspect',
+  ]}>
     <header class="artwork-heading">
       <a class="back-link" href="/work/">Work</a>
       <p class="eyebrow">Featured Work</p>
@@ -32,14 +36,20 @@ const { artwork } = Astro.props;
         {artwork.data.description && (
           <section class="artwork-description" aria-labelledby="description-heading">
             <h2 id="description-heading">About the work</h2>
-            {artwork.data.description.split(/\n\s*\n/).map((paragraph) => <p>{paragraph}</p>)}
+            {artwork.data.description.split(/\n\s*\n/).map((paragraph) => (
+              <p>{paragraph.split(/(big iron|Big Iron|Loot|Big Dreams)/g).map((part) => part === 'big iron' || part === 'Big Iron' || part === 'Loot' || part === 'Big Dreams' ? <cite>{part}</cite> : part)}</p>
+            ))}
           </section>
         )}
       </div>
     </div>
 
     {artwork.data.images.length > 0 && (
-      <section class="artwork-studies" aria-labelledby="photographic-study-heading">
+      <section class:list={[
+        'artwork-studies',
+        artwork.data.images.length === 4 && 'artwork-studies--four',
+        artwork.data.images.length === 3 && 'artwork-studies--three',
+      ]} aria-labelledby="photographic-study-heading">
         <h2 id="photographic-study-heading" class="visually-hidden">Photographic study</h2>
         {artwork.data.images.map((image, index) => <ArtworkPhoto image={image} index={index + 2} />)}
       </section>
