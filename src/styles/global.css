@@ -25,6 +25,8 @@ button { color: inherit; font: inherit; }
 .site-header, .site-footer { width: var(--page); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; }
 .site-header { min-height: 5.5rem; border-bottom: 1px solid var(--rule); }
 .wordmark { font-weight: 600; letter-spacing: .05em; text-decoration: none; text-transform: uppercase; }
+.wordmark { display: inline-flex; align-items: center; gap: .75rem; }
+.wordmark__logo { display: block; width: 3.5rem; height: 3.5rem; flex: none; object-fit: contain; }
 nav { display: flex; flex-wrap: wrap; gap: clamp(.9rem, 2.4vw, 2rem); }
 nav a { color: var(--muted); font-size: .82rem; letter-spacing: .1em; text-decoration: none; text-transform: uppercase; }
 main { width: var(--page); min-height: calc(100vh - 11rem); margin: 0 auto; }
@@ -144,4 +146,23 @@ main { width: var(--page); min-height: calc(100vh - 11rem); margin: 0 auto; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+}
+
+.about-intro { max-width: 58rem; padding-bottom: clamp(4rem, 8vw, 7rem); }
+.about-copy { max-width: 54ch; margin-top: clamp(2rem, 4vw, 3rem); }
+.about-copy p { margin: 0 0 1.35rem; font-size: clamp(1.05rem, 1.35vw, 1.18rem); line-height: 1.8; }
+.contact-intro { max-width: 44rem; }
+.contact-intro__lead { max-width: 38rem; margin: 1.5rem 0 0; font-size: 1.05rem; line-height: 1.7; }
+.contact-email { display: inline-flex; min-height: 2.75rem; align-items: center; margin-top: .5rem; font-size: clamp(1.15rem, 3vw, 1.55rem); overflow-wrap: anywhere; }
+.contact-socials { display: grid; gap: .85rem; margin: clamp(2rem, 4vw, 3rem) 0 0; padding: 1.25rem 0 0; border-top: 1px solid var(--rule); list-style: none; }
+.contact-socials li { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem 1.25rem; min-height: 2.75rem; }
+.contact-socials__label { min-width: 6rem; color: var(--muted); font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; }
+.contact-socials a { display: inline-flex; min-height: 2.75rem; align-items: center; overflow-wrap: anywhere; }
+.site-footer__links { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; }
+.site-footer__links a { display: inline-flex; min-height: 2.75rem; align-items: center; overflow-wrap: anywhere; }
+
+@media (max-width: 48rem) {
+  nav { gap: .4rem .85rem; }
+  nav a { display: inline-flex; min-height: 2.75rem; align-items: center; }
+  .wordmark__logo { width: 3rem; height: 3rem; }
 }

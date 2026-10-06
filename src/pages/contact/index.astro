@@ -2,4 +2,24 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Contact | Petal Steel Art"><section class="page-intro narrow"><p class="eyebrow">Contact</p><h1>Contact information</h1><p class="quiet-note">An email address will be added before public launch. In the meantime, contact Petal Steel Art via Instagram.</p><a class="text-link" href="https://www.instagram.com/petal_steel_art/">@petal_steel_art</a></section></BaseLayout>
+<BaseLayout
+  title="Contact | Petal Steel Art"
+  description="Contact Petal Steel Art about sculpture inquiries, exhibitions, public display opportunities, or other questions."
+>
+  <section class="page-intro contact-intro">
+    <p class="eyebrow">Get in touch</p>
+    <h1>Contact</h1>
+    <p class="contact-intro__lead">For sculpture inquiries, exhibitions, public display opportunities, or other questions:</p>
+    <a class="contact-email" href="mailto:PetalSteelArt@gmail.com">PetalSteelArt@gmail.com</a>
+    <ul class="contact-socials" aria-label="Social media">
+      <li>
+        <span class="contact-socials__label">Instagram</span>
+        <a href="https://www.instagram.com/petal_steel_art/" target="_blank" rel="noopener noreferrer">@Petal_Steel_Art</a>
+      </li>
+      <li>
+        <span class="contact-socials__label">Facebook</span>
+        <a href="https://www.facebook.com/people/Petal-Steel-Art/61564266574964/" target="_blank" rel="noopener noreferrer">Petal Steel Art</a>
+      </li>
+    </ul>
+  </section>
+</BaseLayout>
