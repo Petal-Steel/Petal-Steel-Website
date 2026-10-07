@@ -5,9 +5,10 @@ interface Props {
   image: NonNullable<CollectionEntry<'artworks'>['data']['heroImage']>;
   variant?: 'lead' | 'study';
   index?: number;
+  sizes?: string;
 }
 
-const { image, variant = 'study', index = 1 } = Astro.props;
+const { image, variant = 'study', index = 1, sizes } = Astro.props;
 ---
 
 <figure class:list={['artwork-photo', variant === 'lead' ? 'artwork-photo--lead' : 'artwork-photo--study', `artwork-photo--${index}`]}>
@@ -25,7 +26,9 @@ const { image, variant = 'study', index = 1 } = Astro.props;
       srcset={image.fullWidth > image.width
         ? `${image.src} ${image.width}w, ${image.fullSrc} ${image.fullWidth}w`
         : `${image.src} ${image.width}w`}
-      sizes={variant === 'lead' ? '(min-width: 72rem) 57vw, (min-width: 48rem) 62vw, 100vw' : '(min-width: 72rem) 40vw, (min-width: 48rem) 48vw, 100vw'}
+      sizes={sizes ?? (variant === 'lead'
+        ? '(min-width: 116.67rem) 56.4rem, (min-width: 48rem) calc(65.4vw - 1.74rem), calc(100vw - 2rem)'
+        : '(min-width: 90.5rem) 43rem, (min-width: 48rem) calc((100vw - 2.5rem - 2vw) / 2), calc(100vw - 2rem)')}
       width={image.width}
       height={image.height}
       alt={image.alt}

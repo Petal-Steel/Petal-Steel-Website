@@ -12,7 +12,7 @@ const { artwork } = Astro.props;
       <img
         src={artwork.data.heroImage.src}
         srcset={`${artwork.data.heroImage.src} ${artwork.data.heroImage.width}w, ${artwork.data.heroImage.fullSrc} ${artwork.data.heroImage.fullWidth}w`}
-        sizes="(min-width: 48rem) 46rem, 100vw"
+        sizes="(min-width: 90.5rem) 43rem, (min-width: 48rem) calc((100vw - 4.5rem) / 2), (min-width: 40rem) calc((100vw - 6rem) / 2), calc(100vw - 2rem)"
         width={artwork.data.heroImage.width}
         height={artwork.data.heroImage.height}
         alt={artwork.data.heroImage.alt}

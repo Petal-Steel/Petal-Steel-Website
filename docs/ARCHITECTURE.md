@@ -14,11 +14,11 @@
 - `src/layouts/` contains the shared page shell.
 - `src/components/` contains small reusable artwork display components.
 - `src/pages/` defines static routes.
-- `src/content/artworks/` will contain one data file per work.
-- `src/content/process/` will contain one data file per curated Instagram item.
+- `src/content/artworks/` contains one data file per featured work.
+- `src/content/process/` contains one data file per curated Instagram item.
 - `public/media/artwork/`, `public/media/process/`, and `public/media/identity/` hold committed, optimized public assets.
 - Artwork pages read typed records from `src/content/artworks/`; larger image views use the shared native-dialog viewer.
 
-## Deliberately deferred
+## Current scope
 
-Other artwork records and photography, the real Petal Steel logo, biography, contact email, process selections, and the final homepage design remain later-phase work. A New Dance establishes the reusable editorial page, responsive photo sequence, and image-viewing interaction.
+The Petal Steel Art logo, artist biography and contact details, curated Process selections, and approved homepage composition are implemented. Other Work remains intentionally deferred until additional artwork records and photography are approved. A New Dance established the reusable editorial artwork page, responsive photo sequence, and image-viewing interaction.

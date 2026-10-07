@@ -13,7 +13,7 @@ export async function getStaticPaths() {
 const { artwork } = Astro.props;
 ---
 
-<BaseLayout title={`${artwork.data.title} | Petal Steel Art`} description={`${artwork.data.title}, stainless steel sculpture by ${artwork.data.artist}.`}>
+<BaseLayout title={`${artwork.data.title} | Petal Steel Art`} description={`${artwork.data.title}, ${artwork.data.material} sculpture by ${artwork.data.artist}.`} ogType="article">
   <article class:list={[
     'artwork-page',
     artwork.data.heroImage?.width === artwork.data.heroImage?.height && 'artwork-page--square',
@@ -51,7 +51,17 @@ const { artwork } = Astro.props;
         artwork.data.images.length === 3 && 'artwork-studies--three',
       ]} aria-labelledby="photographic-study-heading">
         <h2 id="photographic-study-heading" class="visually-hidden">Photographic study</h2>
-        {artwork.data.images.map((image, index) => <ArtworkPhoto image={image} index={index + 2} />)}
+        {artwork.data.images.map((image, index) => {
+          const studyIndex = index + 2;
+          const sizes = artwork.data.images.length === 3
+            ? '(min-width: 90.5rem) 28rem, (min-width: 48rem) calc((100vw - 2.5rem - 4vw) / 3), calc(100vw - 2rem)'
+            : artwork.data.images.length === 4
+              ? '(min-width: 90.5rem) 43rem, (min-width: 48rem) calc((100vw - 2.5rem - 2vw) / 2), calc(100vw - 2rem)'
+              : studyIndex >= 5
+                ? '(min-width: 90.5rem) 43rem, (min-width: 48rem) calc((100vw - 2.5rem - 2vw) / 2), calc(100vw - 2rem)'
+                : '(min-width: 90.5rem) 28rem, (min-width: 48rem) calc((100vw - 2.5rem - 4vw) / 3), calc(100vw - 2rem)';
+          return <ArtworkPhoto image={image} index={studyIndex} sizes={sizes} />;
+        })}
       </section>
     )}
   </article>

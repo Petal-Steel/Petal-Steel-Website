@@ -22,6 +22,9 @@ a:hover { color: var(--accent); }
 button { color: inherit; font: inherit; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 
+.skip-link { position: fixed; z-index: 10; top: .75rem; left: .75rem; padding: .65rem 1rem; transform: translateY(-200%); background: var(--text); color: var(--ink); }
+.skip-link:focus { transform: translateY(0); }
+
 .site-header, .site-footer { width: var(--page); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; }
 .site-header { min-height: 5.5rem; border-bottom: 1px solid var(--rule); }
 .wordmark { font-weight: 600; letter-spacing: .05em; text-decoration: none; text-transform: uppercase; }
@@ -94,6 +97,10 @@ main { width: var(--page); min-height: calc(100vh - 11rem); margin: 0 auto; }
 .artwork-studies--three .artwork-photo--study img { aspect-ratio: auto; object-fit: contain; }
 .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; clip-path: inset(50%); }
 
+.not-found { max-width: 40rem; padding: clamp(5rem, 12vw, 9rem) 0; }
+.not-found h1 { margin: .1em 0 .5em; font-size: clamp(2.5rem, 7vw, 5.75rem); font-weight: 400; letter-spacing: -.045em; line-height: .98; }
+.not-found__links { display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; margin-top: 2rem; }
+
 .artwork-lightbox { position: fixed; inset: 0; width: 100vw; height: 100dvh; max-width: none; max-height: none; margin: 0; padding: clamp(3rem, 7vh, 5rem) clamp(1rem, 4vw, 4rem) 2rem; overflow: hidden; border: 0; background: #101315; color: var(--text); }
 .artwork-lightbox::backdrop { background: rgb(7 9 10 / 96%); }
 .artwork-lightbox > img { display: block; width: 100%; height: 100%; object-fit: contain; }
@@ -141,6 +148,10 @@ main { width: var(--page); min-height: calc(100vh - 11rem); margin: 0 auto; }
 @media (max-width: 30rem) {
   .artwork-heading h1 { font-size: 3.1rem; }
   .artwork-facts { font-size: .9rem; }
+}
+
+@media (max-width: 40rem) {
+  .artwork-grid { grid-template-columns: minmax(0, 1fr); }
 }
 
 @media (prefers-reduced-motion: reduce) {

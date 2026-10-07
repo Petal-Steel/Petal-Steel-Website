@@ -4,12 +4,15 @@ import '../styles/global.css';
 interface Props {
   title?: string;
   description?: string;
+  ogType?: 'website' | 'article';
 }
 
 const {
   title = 'Petal Steel Art',
   description = 'Metal sculpture by Petal Steel Art.',
+  ogType = 'website',
 } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? Astro.url);
 ---
 
 <!doctype html>
@@ -18,9 +21,15 @@ const {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:url" content={canonicalURL} />
     <title>{title}</title>
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <a class="wordmark" href="/" aria-label="Petal Steel Art home">
         <img class="wordmark__logo" src="/media/identity/petal-steel-art-logo.svg" width="96" height="96" alt="" />
@@ -33,7 +42,7 @@ const {
         <a href="/contact/">Contact</a>
       </nav>
     </header>
-    <main><slot /></main>
+    <main id="main-content"><slot /></main>
     <footer class="site-footer">
       <span>Petal Steel Art</span>
       <div class="site-footer__links">

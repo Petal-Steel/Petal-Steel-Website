@@ -8,7 +8,7 @@ const featuredArtworks = orderFeaturedArtworks(
 );
 ---
 
-<BaseLayout>
+<BaseLayout description="Explore large-scale steel sculpture by Petal Steel Art, including A New Dance, big iron, Loot, and Big Dreams.">
   {featuredArtworks.map((artwork, artworkIndex) => {
     const supportingImages = artwork.data.images.filter((image) => image.homepageFeature);
     const titleId = `home-heading-${artwork.data.slug}`;
