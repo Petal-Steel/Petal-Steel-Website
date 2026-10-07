@@ -39,7 +39,8 @@ const process = defineCollection({
   type: 'data',
   schema: z.object({
     instagramUrl: z.string().url(),
-    artworkSlug: z.string().optional(),
+    artworkSlug: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),
+    order: z.number().int().positive(),
     caption: z.string().optional(),
     mediaType: z.enum(['post', 'reel']).optional(),
     coverImage: imageReference.optional(),

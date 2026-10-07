@@ -1,0 +1,14 @@
+{
+  "artworkSlug": "a-new-dance",
+  "order": 1,
+  "mediaType": "reel",
+  "instagramUrl": "https://www.instagram.com/petal_steel_art/reel/DOPmVMqDZKD/",
+  "coverImage": {
+    "src": "/media/process/a-new-dance-01.webp",
+    "fullSrc": "/media/process/a-new-dance-01.webp",
+    "width": 311,
+    "height": 412,
+    "fullWidth": 311,
+    "alt": "Early armature for the crane sculpture in the workshop."
+  }
+}

@@ -1,7 +1,87 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const [processItems, artworks] = await Promise.all([
+  getCollection('process'),
+  getCollection('artworks'),
+]);
+
+const artworkBySlug = new Map(artworks.map((artwork) => [artwork.data.slug, artwork]));
+const groups = new Map<string, typeof processItems>();
+
+for (const item of processItems) {
+  const group = groups.get(item.data.artworkSlug) ?? [];
+  group.push(item);
+  groups.set(item.data.artworkSlug, group);
+}
+
+const processGroups = [...groups.entries()]
+  .map(([artworkSlug, items]) => {
+    const artwork = artworkBySlug.get(artworkSlug);
+
+    if (!artwork) {
+      throw new Error(`Process item references unknown artwork: ${artworkSlug}`);
+    }
+
+    return {
+      artwork,
+      items: items.sort((a, b) => a.data.order - b.data.order),
+    };
+  })
+  .sort((a, b) => a.artwork.data.title.localeCompare(b.artwork.data.title));
 ---
 
 <BaseLayout title="Process | Petal Steel Art">
-  <section class="page-intro narrow"><p class="eyebrow">Process</p><h1>In the shop</h1><p>A curated selection of fabrication records will appear here. The ongoing record lives on Instagram.</p><a class="text-link" href="https://www.instagram.com/petal_steel_art/">@petal_steel_art</a></section>
+  <section class="page-intro process-intro">
+    <p class="eyebrow">Process</p>
+    <h1>Selected moments</h1>
+    <p>Selected moments from the making of the work, from fabrication through assembly and finishing.</p>
+    <p>For a fuller record of the work in progress, follow <a href="https://www.instagram.com/petal_steel_art/" target="_blank" rel="noopener noreferrer">@Petal_Steel_Art on Instagram</a>.</p>
+  </section>
+
+  <div class="process-groups">
+    {processGroups.map(({ artwork, items }) => (
+      <section class="process-group" aria-labelledby={`process-${artwork.data.slug}`}>
+        <header class="process-group__header">
+          <div>
+            <p class="eyebrow">{items.length} selected Reels</p>
+            <h2 id={`process-${artwork.data.slug}`}>
+              <a href={`/work/${artwork.data.slug}/`}>{artwork.data.title}</a>
+            </h2>
+          </div>
+        </header>
+
+        <ol class="process-links">
+          {items.map((item) => (
+            <li>
+              <a
+                class="process-link"
+                href={item.data.instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Watch ${artwork.data.title} process reel ${item.data.order} on Instagram`}
+              >
+                {item.data.coverImage && (
+                  <img
+                    class="process-link__image"
+                    src={item.data.coverImage.src}
+                    alt={item.data.coverImage.alt}
+                    width={item.data.coverImage.width}
+                    height={item.data.coverImage.height}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                )}
+                <span class="process-link__caption">
+                  <span>Process {String(item.data.order).padStart(2, '0')}</span>
+                  <span>Watch Reel <span aria-hidden="true">↗</span></span>
+                </span>
+              </a>
+            </li>
+          ))}
+        </ol>
+      </section>
+    ))}
+  </div>
 </BaseLayout>

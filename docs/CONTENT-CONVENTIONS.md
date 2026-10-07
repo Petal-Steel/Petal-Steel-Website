@@ -18,7 +18,7 @@ Preserve artist-supplied descriptions verbatim. New public-facing copy should no
 
 ## Process entries
 
-Create a file in `src/content/process/` with its public `instagramUrl`. It may include `artworkSlug`, a concise `caption`, `mediaType` (`post` or `reel`), and an optional locally stored cover image. This is a curated editorial selection, not an automatic Instagram mirror.
+Create a file in `src/content/process/` with a stable, descriptive filename and the required `instagramUrl`, `artworkSlug`, and positive integer `order`. `artworkSlug` explicitly associates the item with an artwork record, and `order` controls its position within that sculpture's Process group. Optional future fields include a concise `caption`, `mediaType` (`post` or `reel`), and a locally stored cover image. This is a curated editorial selection, not an automatic Instagram mirror.
 
 ## Media naming
 
