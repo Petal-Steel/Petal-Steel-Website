@@ -1,0 +1,46 @@
+{
+  "title": "Arrowhead",
+  "slug": "arrowhead",
+  "images": [
+    {
+      "src": "/media/artwork/arrowhead/arrowhead-view-01-900.webp",
+      "fullSrc": "/media/artwork/arrowhead/arrowhead-view-01-1152.webp",
+      "width": 900,
+      "height": 1200,
+      "fullWidth": 1152,
+      "alt": "Front view of an arrowhead-shaped form on a carved base."
+    },
+    {
+      "src": "/media/artwork/arrowhead/arrowhead-view-02-900.webp",
+      "fullSrc": "/media/artwork/arrowhead/arrowhead-view-02-1152.webp",
+      "width": 900,
+      "height": 1200,
+      "fullWidth": 1152,
+      "alt": "Angled view of the arrowhead-shaped form and base."
+    },
+    {
+      "src": "/media/artwork/arrowhead/arrowhead-view-03-900.webp",
+      "fullSrc": "/media/artwork/arrowhead/arrowhead-view-03-1152.webp",
+      "width": 900,
+      "height": 1200,
+      "fullWidth": 1152,
+      "alt": "Side view of the pointed form and its base."
+    },
+    {
+      "src": "/media/artwork/arrowhead/arrowhead-view-04-900.webp",
+      "fullSrc": "/media/artwork/arrowhead/arrowhead-view-04-1152.webp",
+      "width": 900,
+      "height": 1200,
+      "fullWidth": 1152,
+      "alt": "Close view of the arrowhead-shaped surface and wrapped wire."
+    },
+    {
+      "src": "/media/artwork/arrowhead/arrowhead-view-05-900.webp",
+      "fullSrc": "/media/artwork/arrowhead/arrowhead-view-05-1152.webp",
+      "width": 900,
+      "height": 1200,
+      "fullWidth": 1152,
+      "alt": "View from the other side of the arrowhead-shaped form and base."
+    }
+  ]
+}

@@ -47,4 +47,13 @@ const process = defineCollection({
   }),
 });
 
-export const collections = { artworks, process };
+const otherWork = defineCollection({
+  type: 'data',
+  schema: z.object({
+    title: z.string(),
+    slug: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),
+    images: z.array(imageReference).length(5),
+  }),
+});
+
+export const collections = { artworks, process, 'other-work': otherWork };

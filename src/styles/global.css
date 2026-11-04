@@ -62,6 +62,10 @@ main { width: var(--page); min-height: calc(100vh - 11rem); margin: 0 auto; }
 .artwork-card__content { padding-top: .85rem; }
 .artwork-card h2 { margin: 0 0 .5rem; font-family: Georgia, 'Times New Roman', serif; font-size: 1.45rem; font-weight: 400; }
 .artwork-card h2 a { text-decoration: none; }
+.other-work-index { padding-bottom: 5rem; }
+.other-work-gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; column-gap: clamp(1rem, 2vw, 1.75rem); row-gap: clamp(2rem, 4vw, 4rem); }
+.other-work-gallery .artwork-photo { grid-column: auto; width: auto; margin: 0; }
+.other-work-gallery .artwork-photo--study img { aspect-ratio: auto; object-fit: contain; }
 .artwork-facts { display: grid; gap: .35rem; margin: 0; color: var(--muted); font-size: .92rem; }
 .artwork-facts div { display: flex; flex-wrap: wrap; gap: .35rem; }
 .artwork-facts dt { color: var(--text); }
@@ -129,6 +133,7 @@ main { width: var(--page); min-height: calc(100vh - 11rem); margin: 0 auto; }
   .artwork-record { padding-top: .25rem; }
   .artwork-description { margin-top: 2rem; }
   .artwork-studies { display: flex; flex-direction: column; gap: 2.25rem; margin-top: 3.5rem; }
+  .other-work-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .artwork-photo--study { width: 100%; margin: 0; }
   .artwork-studies--three .artwork-photo--4 { width: 100%; }
   .artwork-photo--study img { aspect-ratio: auto; object-fit: contain; }
@@ -148,6 +153,7 @@ main { width: var(--page); min-height: calc(100vh - 11rem); margin: 0 auto; }
 @media (max-width: 30rem) {
   .artwork-heading h1 { font-size: 3.1rem; }
   .artwork-facts { font-size: .9rem; }
+  .other-work-gallery { grid-template-columns: minmax(0, 1fr); }
 }
 
 @media (max-width: 40rem) {

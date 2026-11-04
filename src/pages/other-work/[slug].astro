@@ -1,0 +1,35 @@
+---
+import { getCollection } from 'astro:content';
+import ArtworkLightbox from '../../components/ArtworkLightbox.astro';
+import ArtworkPhoto from '../../components/ArtworkPhoto.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const artworks = await getCollection('other-work');
+  return artworks.map((artwork) => ({ params: { slug: artwork.data.slug }, props: { artwork } }));
+}
+
+const { artwork } = Astro.props;
+---
+
+<BaseLayout title={`${artwork.data.title} | Other Work | Petal Steel Art`} ogType="article">
+  <article class="artwork-page other-work-detail">
+    <header class="artwork-heading">
+      <a class="back-link" href="/other-work/">Other Work</a>
+      <p class="eyebrow">Other Work</p>
+      <h1>{artwork.data.title}</h1>
+    </header>
+
+    <div class="other-work-gallery" role="group" aria-label={`Photographs of ${artwork.data.title}`}>
+      {artwork.data.images.map((image, index) => (
+        <ArtworkPhoto
+          image={image}
+          variant="study"
+          index={index + 1}
+          sizes="(min-width: 90.5rem) 28rem, (min-width: 68rem) calc((100vw - 2.5rem - 4vw) / 3), (min-width: 48rem) calc((100vw - 2.5rem - 2vw) / 2), (min-width: 30rem) calc((100vw - 3rem) / 2), calc(100vw - 2rem)"
+        />
+      ))}
+    </div>
+  </article>
+  <ArtworkLightbox />
+</BaseLayout>

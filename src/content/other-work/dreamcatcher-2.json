@@ -1,0 +1,46 @@
+{
+  "title": "Dreamcatcher 2",
+  "slug": "dreamcatcher-2",
+  "images": [
+    {
+      "src": "/media/artwork/dreamcatcher-2/dreamcatcher-2-view-01-900.webp",
+      "fullSrc": "/media/artwork/dreamcatcher-2/dreamcatcher-2-view-01-1152.webp",
+      "width": 900,
+      "height": 1200,
+      "fullWidth": 1152,
+      "alt": "Front view of a dreamcatcher form with a wire web and feather shapes on a carved base."
+    },
+    {
+      "src": "/media/artwork/dreamcatcher-2/dreamcatcher-2-view-02-900.webp",
+      "fullSrc": "/media/artwork/dreamcatcher-2/dreamcatcher-2-view-02-1152.webp",
+      "width": 900,
+      "height": 1200,
+      "fullWidth": 1152,
+      "alt": "Angled view of the web and feather forms against the carved base."
+    },
+    {
+      "src": "/media/artwork/dreamcatcher-2/dreamcatcher-2-view-03-900.webp",
+      "fullSrc": "/media/artwork/dreamcatcher-2/dreamcatcher-2-view-03-1152.webp",
+      "width": 900,
+      "height": 1200,
+      "fullWidth": 1152,
+      "alt": "Closer view of the wire web and hanging feather forms."
+    },
+    {
+      "src": "/media/artwork/dreamcatcher-2/dreamcatcher-2-view-04-900.webp",
+      "fullSrc": "/media/artwork/dreamcatcher-2/dreamcatcher-2-view-04-1152.webp",
+      "width": 900,
+      "height": 1200,
+      "fullWidth": 1152,
+      "alt": "Side view showing the depth of the web and carved base."
+    },
+    {
+      "src": "/media/artwork/dreamcatcher-2/dreamcatcher-2-view-05-900.webp",
+      "fullSrc": "/media/artwork/dreamcatcher-2/dreamcatcher-2-view-05-1152.webp",
+      "width": 900,
+      "height": 1200,
+      "fullWidth": 1152,
+      "alt": "Front view of the dreamcatcher form and feather shapes."
+    }
+  ]
+}

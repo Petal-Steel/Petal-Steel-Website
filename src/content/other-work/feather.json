@@ -1,0 +1,46 @@
+{
+  "title": "Feather",
+  "slug": "feather",
+  "images": [
+    {
+      "src": "/media/artwork/feather/feather-view-01-900.webp",
+      "fullSrc": "/media/artwork/feather/feather-view-01-1152.webp",
+      "width": 900,
+      "height": 1200,
+      "fullWidth": 1152,
+      "alt": "Feather-shaped form resting on a carved base, viewed from the side."
+    },
+    {
+      "src": "/media/artwork/feather/feather-view-02-900.webp",
+      "fullSrc": "/media/artwork/feather/feather-view-02-1152.webp",
+      "width": 900,
+      "height": 1200,
+      "fullWidth": 1152,
+      "alt": "Angled view of the feather-shaped form and base."
+    },
+    {
+      "src": "/media/artwork/feather/feather-view-03-900.webp",
+      "fullSrc": "/media/artwork/feather/feather-view-03-1152.webp",
+      "width": 900,
+      "height": 1200,
+      "fullWidth": 1152,
+      "alt": "Low side view showing the narrow profile of the feather-shaped form."
+    },
+    {
+      "src": "/media/artwork/feather/feather-view-04-900.webp",
+      "fullSrc": "/media/artwork/feather/feather-view-04-1152.webp",
+      "width": 900,
+      "height": 1200,
+      "fullWidth": 1152,
+      "alt": "Close view of layered feather forms and curved wire details."
+    },
+    {
+      "src": "/media/artwork/feather/feather-view-05-900.webp",
+      "fullSrc": "/media/artwork/feather/feather-view-05-1152.webp",
+      "width": 900,
+      "height": 1200,
+      "fullWidth": 1152,
+      "alt": "Feather-shaped form and base viewed from the opposite side."
+    }
+  ]
+}

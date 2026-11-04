@@ -1,0 +1,46 @@
+{
+  "title": "Gate & Fence",
+  "slug": "gate-and-fence",
+  "images": [
+    {
+      "src": "/media/artwork/gate-and-fence/gate-and-fence-view-01-900.webp",
+      "fullSrc": "/media/artwork/gate-and-fence/gate-and-fence-view-01-1152.webp",
+      "width": 900,
+      "height": 1200,
+      "fullWidth": 1152,
+      "alt": "Full view of a gate and fence form arranged on a carved base."
+    },
+    {
+      "src": "/media/artwork/gate-and-fence/gate-and-fence-view-02-900.webp",
+      "fullSrc": "/media/artwork/gate-and-fence/gate-and-fence-view-02-1152.webp",
+      "width": 900,
+      "height": 1200,
+      "fullWidth": 1152,
+      "alt": "Angled view of the gate, fence posts, and base."
+    },
+    {
+      "src": "/media/artwork/gate-and-fence/gate-and-fence-view-03-900.webp",
+      "fullSrc": "/media/artwork/gate-and-fence/gate-and-fence-view-03-1152.webp",
+      "width": 900,
+      "height": 1200,
+      "fullWidth": 1152,
+      "alt": "Side view of the gate and fence along the base."
+    },
+    {
+      "src": "/media/artwork/gate-and-fence/gate-and-fence-view-04-900.webp",
+      "fullSrc": "/media/artwork/gate-and-fence/gate-and-fence-view-04-1152.webp",
+      "width": 900,
+      "height": 1200,
+      "fullWidth": 1152,
+      "alt": "Close view of a fence post and adjoining wire beside the gate."
+    },
+    {
+      "src": "/media/artwork/gate-and-fence/gate-and-fence-view-05-900.webp",
+      "fullSrc": "/media/artwork/gate-and-fence/gate-and-fence-view-05-1152.webp",
+      "width": 900,
+      "height": 1200,
+      "fullWidth": 1152,
+      "alt": "Closer angled view of the gate and fence posts on the base."
+    }
+  ]
+}

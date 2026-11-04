@@ -1,0 +1,18 @@
+---
+import { getCollection } from 'astro:content';
+import OtherWorkCard from '../../components/OtherWorkCard.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const displayOrder = ['dreamcatcher-2', 'gate-and-fence', 'arrowhead', 'feather'];
+const entries = await getCollection('other-work');
+const artworks = [...entries].sort((a, b) => displayOrder.indexOf(a.data.slug) - displayOrder.indexOf(b.data.slug));
+---
+
+<BaseLayout title="Other Work | Petal Steel Art">
+  <section class="page-intro"><h1>Other Work</h1></section>
+  <section class="other-work-index" aria-label="Other Work gallery">
+    <div class="artwork-grid">
+      {artworks.map((artwork) => <OtherWorkCard artwork={artwork} />)}
+    </div>
+  </section>
+</BaseLayout>
