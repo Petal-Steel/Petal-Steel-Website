@@ -12,11 +12,11 @@ export async function getStaticPaths() {
 const { artwork } = Astro.props;
 ---
 
-<BaseLayout title={`${artwork.data.title} | Other Work | Petal Steel Art`} ogType="article">
+<BaseLayout title={`${artwork.data.title} | Studio Works | Petal Steel Art`} ogType="article">
   <article class="artwork-page other-work-detail">
     <header class="artwork-heading">
-      <a class="back-link" href="/other-work/">Other Work</a>
-      <p class="eyebrow">Other Work</p>
+      <a class="back-link" href="/other-work/">Studio Works</a>
+      <p class="eyebrow">Studio Works</p>
       <h1>{artwork.data.title}</h1>
     </header>
 

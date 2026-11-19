@@ -9,14 +9,14 @@ const featured = orderFeaturedArtworks(artworks.filter(({ data }) => data.classi
 const otherWork = artworks.filter(({ data }) => data.classification === 'other-work');
 ---
 
-<BaseLayout title="Work | Petal Steel Art" description="Explore featured sculptures by Petal Steel Art, with artwork details, materials, and photography.">
-  <section class="page-intro"><p class="eyebrow">Work</p><h1>Sculpture</h1></section>
+<BaseLayout title="Sculptures | Petal Steel Art" description="Explore featured sculptures by Petal Steel Art, with artwork details, materials, and photography.">
+  <section class="page-intro"><p class="eyebrow">Sculptures</p><h1>Sculptures</h1></section>
   <section class="artwork-group" aria-labelledby="featured-work">
-    <h2 id="featured-work">Featured Work</h2>
+    <h2 id="featured-work">Featured Sculptures</h2>
     {featured.length ? <div class="artwork-grid">{featured.map((artwork) => <ArtworkCard artwork={artwork} />)}</div> : <p class="quiet-note">Featured artwork will be added with approved photography and factual details.</p>}
   </section>
   {otherWork.length > 0 && <section class="artwork-group" aria-labelledby="other-work">
-    <h2 id="other-work">Other Work</h2>
+    <h2 id="other-work">Studio Works</h2>
     <div class="artwork-grid">{otherWork.map((artwork) => <ArtworkCard artwork={artwork} />)}</div>
   </section>}
 </BaseLayout>

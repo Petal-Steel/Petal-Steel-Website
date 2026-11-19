@@ -20,8 +20,8 @@ const { artwork } = Astro.props;
     artwork.data.heroImage && artwork.data.heroImage.width !== artwork.data.heroImage.height && artwork.data.heroImage.width / artwork.data.heroImage.height > 0.7 && 'artwork-page--natural-aspect',
   ]}>
     <header class="artwork-heading">
-      <a class="back-link" href="/work/">Work</a>
-      <p class="eyebrow">Featured Work</p>
+      <a class="back-link" href="/work/">Sculptures</a>
+      <p class="eyebrow">Featured Sculptures</p>
       <h1>{artwork.data.title}</h1>
       {artwork.data.artist && <p class="artwork-artist">By {artwork.data.artist}</p>}
     </header>
